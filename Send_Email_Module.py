@@ -4,7 +4,7 @@ __author__ = 'Brian M Anderson'
 import smtplib, ssl
 
 
-class Send_Email(object):
+class Send_Email_Class(object):
     def __init__(self, email_address, password, port=465):
         # Create a secure SSL context
         self.port = port
@@ -33,6 +33,12 @@ def main():
 if __name__ == '__main__':
     main()
 
-    #email_class_object = Send_Email('email@gmail.com','password')
-    #email_class_object.set_outbound_email('phonenumber@vtext.com')
-    #email_class_object.send_email('Test')
+    # email_class_object = Send_Email_Class('email@gmail.com', 'password')
+    # email_class_object.set_outbound_email('phonenumber@vtext.com')
+    #
+    # try:
+    #     for i in range(10):
+    #         print(i)
+    #     email_class_object.send_email('Finished!')
+    # except:
+    #     email_class_object.send_email('Failed!')
