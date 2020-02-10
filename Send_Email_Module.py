@@ -21,6 +21,7 @@ class Send_Email_Class(object):
         self.server.login(self.email_address, self.password)
 
     def send_email(self, message,outbound_email=None):
+        self.login()  # Login each time in case you have timeout issues
         if outbound_email is None:
             outbound_email = self.outbound_email
         self.server.sendmail(self.email_address,outbound_email,message)
